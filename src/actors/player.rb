@@ -7,6 +7,7 @@ define_actor :player do
 
     collidable shape: :circle, :radius => 20
     shooter    shoots: :frickin_laser, direction: vec2(0,1)
-    mover      speed: 0.14
+    mover      speed: 2
+    #mover      speed: 0.14
   end
 end

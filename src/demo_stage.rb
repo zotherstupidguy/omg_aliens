@@ -12,11 +12,12 @@ define_stage :demo do
 
     @score = create_actor :score, x: 10, y: 10
     create_actor :fps, x: 400, y: 10
-    create_actor :logo, x: 480, y: 460
+    #create_actor :logo, x: 480, y: 460
 
     @aliens = []
 
-    columns = 8
+    columns = 14
+    #columns = 8
     rows = 2 + backstage[:wave]
 
     columns.times do |c|
@@ -86,7 +87,8 @@ define_stage :demo do
 
       if @aliens.empty?
         @player.remove
-        if backstage[:wave] == 3
+        if backstage[:wave] == 6
+        #if backstage[:wave] == 3
           fire :next_stage 
         else
           fire :restart_stage 
@@ -143,11 +145,11 @@ define_stage :demo do
     def you_lose
       if @player.alive?
         sound_manager.play_sound :player_death
-        create_actor :label, text: "YOU LOSE!", x: 150, y: 100, size: 90
-        @player.remove
-        add_timer :you_lose, 1_500 do
-          fire :prev_stage
-        end
+        #create_actor :label, text: "YOU LOSE!", x: 150, y: 100, size: 90
+        #@player.remove
+        #add_timer :you_lose, 1_500 do
+        #  fire :prev_stage
+        #end
       end
     end
 
@@ -156,4 +158,3 @@ define_stage :demo do
     end
   end
 end
-

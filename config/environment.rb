@@ -26,6 +26,3 @@ end
 require "gamebox_application"
 
 require_all Dir.glob("**/*.rb").reject{ |f| f.match("spec") || f.match("src/app.rb")}
-
-
-

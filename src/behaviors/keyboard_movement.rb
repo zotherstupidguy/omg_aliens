@@ -5,5 +5,8 @@ define_behavior :keyboard_movement do
     i = input_manager
     i.while_pressed KbLeft, actor, :move_left
     i.while_pressed KbRight, actor, :move_right
+
+    i.while_pressed KbA, actor, :move_left
+    i.while_pressed KbD, actor, :move_right
   end
 end
