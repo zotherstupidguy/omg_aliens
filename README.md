@@ -1,0 +1,5 @@
+== OMG Aliens
+
+OMG Aliens is a blatant space invaders clone to demonstrate use of Gamebox.
+
+![screenshot](screenshot.png)
